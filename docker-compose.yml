@@ -1,0 +1,9 @@
+services:
+
+  nginx:
+    image: docker.rechip.eu/rechip/nginx-proxy
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        ENABLED_MODULES: brotli ndk lua

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# To reload certs
+service nginx reload
