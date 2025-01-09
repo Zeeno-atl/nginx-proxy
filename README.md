@@ -75,6 +75,7 @@ server {
   server_name server.rechip.eu; # <-- your hostname
 
   include include/ssl.conf; # <-- use certs/https
+  include /etc/letsencrypt/options-ssl-nginx.conf; # <-- use letsencrypt options
 
   include include/prometheus_location.conf; # <-- Expose /nginx-metrics Prometheus endpoint
   

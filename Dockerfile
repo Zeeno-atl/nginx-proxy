@@ -1,4 +1,4 @@
-FROM nginx:1.25 as builder
+FROM nginx:1.26 as builder
 
 ARG ENABLED_MODULES
 
@@ -54,7 +54,7 @@ RUN set -ex \
         fi; \
     done
 
-FROM nginx:1.25
+FROM nginx:1.26
 
 ARG ENABLED_MODULES
 COPY --from=builder /tmp/packages /tmp/packages
